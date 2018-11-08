@@ -1,0 +1,51 @@
+
+
+
+.Main{
+    height: 720px;
+    width: 100%;
+    background: black;
+
+}
+#particles-js{
+    width: 100%;
+    height: 720px;
+    position: absolute;
+    top: 0;
+    background: transparent;
+    transition-duration: 1s;
+
+}
+
+#helloMsg{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 300px;
+
+}
+#nameHover{
+    font-weight: bold;
+    color: #F15025;
+    background: transparent;
+    font-size: 50px;
+
+}
+
+hr{
+    width: 60%;
+}
+#lookDownBtn{
+    background: transparent;
+    padding-top: 10px;
+    border: #F15025 solid 1px ;
+    font-size: 18px;
+    text-align: center;
+    height: 60px;
+    width: 234px;
+}
+#errow{
+    transition-duration: 1s;
+}
