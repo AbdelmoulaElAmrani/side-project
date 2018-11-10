@@ -1,10 +1,11 @@
-
-
-
+html {
+    scroll-behavior: smooth;
+    background: #F7F3E3; /*LINEN*/
+}
 .Main{
     height: 720px;
     width: 100%;
-    background: black;
+    background: #020122; /*RICH BLACK (FOGRA29)*/
 
 }
 #particles-js{
@@ -20,7 +21,7 @@
 #helloMsg{
     font-family: 'Orbitron', sans-serif;
     font-size: 50px;
-    color: white;
+    color: #F7F3E3;
     text-align: center;
     position: relative;
     top: 300px;
@@ -28,7 +29,7 @@
 }
 #nameHover{
     font-weight: bold;
-    color: #F15025;
+    color: #F15025; /*FLAME*/
     background: transparent;
     font-size: 50px;
 
@@ -48,4 +49,98 @@ hr{
 }
 #errow{
     transition-duration: 1s;
+}
+html.sr .load-hidden {
+    visibility: hidden;
+}
+.headline , .tagline{
+    text-align: center;
+}
+.widget-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border-radius: 8px;
+}
+.container{
+   font-family: 'Orbitron', sans-serif;
+;
+}
+
+.widget {
+    flex: auto;
+    margin: 0.5rem;
+    background: transparent;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: larger;
+}
+.widget{
+
+    margin-bottom: 10px;
+    min-height: 400px;
+}
+
+.card .card-image {
+}
+.card .card-image .card-title{
+    top: 25px;
+    text-align: center;
+    color: #F7F3E3;
+    /*padding:0 25%;*/
+    line-height: 20px;
+    width: auto;
+    height: 0px;
+    z-index: 1;
+}
+
+
+#weatherWidget{
+    background:url("IMG/weather.gif") repeat  bottom;
+    background-size: cover;
+
+}
+#weatherWidget:after{
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: rgba(2,1,34, 0.5);
+}
+#weatherWidget2{
+    background: url("IMG/game.gif") no-repeat bottom;
+    background-size: cover;
+}
+#weatherWidget2:after{
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: rgba(2,1,34, 0.5);
+}
+#weatherWidget3{
+    background: url("IMG/btn.gif") no-repeat bottom;
+    background-size: cover;
+}
+#weatherWidget3:after{
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: rgba(2,1,34, 0.5);
+}
+.viewBtn>.material-icons {
+    background: #F15025;
 }

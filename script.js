@@ -14,7 +14,7 @@ $('#nameHover').mouseenter(() => {
 });
 
 $('#lookDownBtn').mouseenter(() => {
-        $('#lookDownBtn').css("background" , '#F15025')
+    $('#lookDownBtn').css("background" , '#F15025')
         .children().css('transform' , 'rotate(90deg)');
         $('#particles-js').css('width', '110%')
     }).mouseleave(() => {
@@ -26,4 +26,7 @@ $('#lookDownBtn').mouseenter(() => {
 });
 
 
-
+ScrollReveal().reveal('.headline', );
+ScrollReveal().reveal('.tagline', { delay: 500 });
+ScrollReveal().reveal('.punchline', { delay: 2000 });
+ScrollReveal().reveal('.widget', { interval: 500 });
