@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 40px 0 0 0;
+            font-family: sans-serif;
+            color: #333;
+            line-height: 140%;
+        }
+
+        .btnBox {
+            /*position: relative;*/
+            /*left: 10%;*/
+            /*width: 80%;*/
+            /*height: 70em;*/
+            /*background: #020122;*/
+
+        }
+
+        .btnBox button {
+            background-color: rgb(2, 1, 35, 0.1);
+            height: 50px;
+            /*border: #020122 solid 1px;*/
+            font-size: 20px;
+            margin: 10px;
+            transition-duration: 0.3s;
+            box-shadow: 0 3px 4px rgba(0,0,0,0.15)
+        }
+
+        .btnBox button a {
+            text-decoration: none;
+            color: #020122;
+            text-align: center;
+        }
+
+        .hvrGrow:hover {
+            transform: scale(1.1);
+        }
+        .hvrShrink:hover {
+            transform: scale(0.9);
+        }
+        .hvrPulseGrow:hover {
+            animation-duration: .5s;
+            animation-name: hvrPulseGrow;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes hvrPulseGrow {
+            25%{
+                transform: scale(1.1);
+            }
+            50%{
+                transform: scale(1.15);
+
+            }
+            75%{
+                transform: scale(1.2);
+            }
+            100%{
+                transform: scale(1.25);
+            }
+
+        }
+        .hvrPulseShrink:hover{
+            animation-duration: .5s;
+            animation-name: hvrPulseshrnk;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes hvrPulseshrnk {
+            25%{
+                transform: scale(0.95);
+            }
+            50%{
+                transform: scale(0.93);
+
+            }
+            75%{
+                transform: scale(0.92);
+            }
+            100%{
+                transform: scale(0.9);
+            }
+
+        }
+
+        .hrvPush:hover{
+            animation: .7s;
+            animation-name: push;
+        }
+        @keyframes push {
+            50%{
+                transform: scale(0.8);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+        .hvrPop:hover{
+            animation: .7s;
+            animation-name: pop;
+        }
+        @keyframes pop {
+            50%{
+                transform: scale(1.2);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+        .hvrRotate:hover{
+            animation: 1s;
+            transform: rotate(4deg);
+        }
+        .hvrRotateGrow:hover{
+            animation: 1s;
+            transform: scale(1.2) rotate(-5deg);
+        }
+        .hvrFloat:hover{
+            animation: 1s;
+            transform: translateY(-8px);
+        }
+        .hvrFloatPluse:hover{
+            animation: 1s;
+            animation-name: floatFly;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+        @keyframes floatFly {
+            50%{
+                transform: translateY(-9px);
+            }
+            100%{
+                transform: translateY(-3px);
+            }
+        }
+        .hvrBuzz:hover{
+            animation: .1s;
+            animation-name: buzz;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+        @keyframes buzz {
+            50%{
+                transform: translateZ(3px) rotate(4deg);
+            }
+            100%{
+                transform: translateZ(-3px) rotate(-4deg);
+            }
+        }
+        .hbrBuzzEnd:hover{
+            animation: .3s;
+            animation-name: buzzend;
+        }
+        @keyframes buzzend {
+            10%{
+                transform: translateZ(3px) rotate(4deg);
+            }
+            25%{
+                transform: translateZ(-3px) rotate(-4deg);
+            }
+            40%{
+                transform: translateZ(3px) rotate(4deg);
+            }
+            55%{
+                transform: translateZ(-3px) rotate(-4deg);
+            }
+            70%{
+                transform: translateZ(3px) rotate(4deg);
+            }
+            85%{
+                transform: translateZ(-3px) rotate(-4deg);
+            }
+            100%{
+                transform: translateZ(3px) rotate(4deg);
+            }
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+<div class="btnBox container">
+    <h1>SIMPLE HOVER EFFECTS</h1>
+    <div class="row">
+        <h2>2D transitions</h2>
+        <div class="col s4 m3 l2">
+            <button class="hvrGrow"><a href="#">GROW</a></button>
+        </div>
+        <div class="col s4 m3 l2">
+            <button class="hvrShrink"><a href="#">SHRINK</a></button>
+        </div>
+        <div class="col s4 m3 l2">
+            <button class="hvrPulseGrow"><a href="#">PULSE GROW</a></button>
+        </div>
+        <div class="col s4 m3 l2">
+            <button class="hvrPulseShrink"><a href="#">PULSE SHRINK</a></button>
+        </div>
+        <div class="col s4 m3 l2">
+            <button class="hrvPush"><a href="#">PUSH</a></button>
+        </div>
+        <div class="col s4 m3 l2">
+            <button class="hvrPop"><a href="#">POP</a></button>
+        </div>
+        <div class="col s4 m3 l2">
+            <button class="hvrRotate"><a href="#">ROTATE</a></button>
+        </div>
+        <div class="col s4 m3 l2">
+            <button class="hvrRotateGrow"><a href="#">ROTATE & GROW</a></button>
+        </div>
+        <div class="col s4 m3 l2">
+            <button class="hvrFloat"><a href="#">FLOAT</a></button>
+        </div>
+        <div class="col s4 m3 l2">
+            <button class="hvrFloatPluse"><a href="#">FLOAT +</a></button>
+        </div>
+        <div class="col s4 m3 l2">
+            <button class="hvrBuzz"><a href="#">BUZZ</a></button>
+        </div>
+        <div class="col s4 m3 l2">
+            <button class="hbrBuzzEnd"><a href="#">BUZZ END</a></button>
+        </div>
+
+
+    </div>
+    <div>
+        <h2>Background Transitions</h2>
+
+        <div class="col s4 m3 l2">
+            <button class="hbrSweepToRight"><a href="#">SWEEP TO RIGHT</a></button>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
