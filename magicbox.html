@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .magicBox{
+        height: 600px;
+        width: 600px;
+        /*background: #F15025;*/
+        cursor:pointer;
+        box-sizing: border-box;
+        overflow: hidden;
+        animation-duration: 1s;
+  }
+    .box1{
+        height: 50%;
+        width: 50%;
+        background: #BD9302;
+        float: right;
+
+    }
+    .box2{
+        height: 50%;
+        width: 50%;
+        background: #0A6A56;
+    }
+    .box3{
+        height: 50%;
+        width: 50%;
+        background: #A82B11;
+        float: right;
+    }
+    .box4{
+        height: 50%;
+        width: 50%;
+        background: black;
+    }
+    .boxWrapper{
+        height: 100%;
+        width: 100%;
+
+    }
+    .box{
+        z-index: 1;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+</style>
+<body>
+
+<main class="magicBox">
+    <section class="box1 box">
+
+    </section>
+    <section class="box2 box">
+
+    </section>
+    <section class="box3 box">
+
+    </section>
+    <section class="box4 box">
+
+    </section>
+</main>
+<script src="jquery-2.2.4.min.js"></script>
+<script>
+
+    $(document).on("click",".box", function () {
+
+
+            $(this).html( `<div class="boxWrapper"  >
+        <div class="box1 box" >
+
+            </div>
+            <div class="box2 box" >
+
+            </div>
+            <div class="box3 box" >
+
+            </div>
+            <div class="box4 box" >
+
+            </div>
+             </div>` ).removeClass("box")
+
+        });
+</script>
+</body>
+</html>
