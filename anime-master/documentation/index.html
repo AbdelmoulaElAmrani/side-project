@@ -184,7 +184,7 @@ var JSarray = anime({
 <script>var myObject = {
   prop1: 0,
   prop2: '0%'
-}
+};
 var JSobjectProp = anime({
   targets: myObject,
   prop1: 50,
@@ -1242,7 +1242,7 @@ allCallbacks.update = function(anim) {
   if (!anim.completed) {
     completedLogEl2.value = '';
   }
-}
+};
 
 allCallbacks.begin =  function() { beganLogEl2.value = 'began'; };
 allCallbacks.complete = function() { completedLogEl2.value = 'completed'; };
@@ -1847,7 +1847,7 @@ elasticity.add({
   </div>
 <script>anime.easings['myCustomEasingName'] = function(t) {
   return Math.pow(Math.sin(t * 3), 3);
-}
+};
 
 var customEasingFunction = anime({
   targets: '#customEasingFunction .el',

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+        }
+
+        body {
+            background-color: #F15025;
+            font-family: Arial;
+        }
+
+        .chat {
+            width: 280px;
+            height: 500px;
+            background-size: cover;
+            background: white center;
+            position: absolute;
+            border: 10px solid #000;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 20px #000;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            box-sizing: border-box;
+        }
+        .chat .messages {
+            position: absolute;
+            left: 0;
+            bottom: 60px;
+            height: auto;
+            width: 100%;
+            max-height: 70% !important;
+            scroll-behavior: smooth;
+            overflow-y: auto;
+
+        }
+        .chat .messages .message {
+            padding: 20px 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .chat .messages .message .you, .chat .messages .message .pibo {
+            padding: 10px;
+            width: 75%;
+            position: relative;
+            margin-top: 5px;
+        }
+
+        .suggestedQuestions ,.chat .messages .message .you {
+            border-radius: 10px 0 10px 10px;
+            background: #48b453;
+            float: right;
+            min-width: 200px;
+        }
+
+        .chat .messages .message .pibo{
+            border-radius:0 10px 10px 10px;
+            background-color: #3498db;
+            float: left;
+        }
+
+        .chat .messages .message .piboSlide , .chat .messages .message .dots, .chat .messages .message .you {
+            position: relative;
+            animation: Slide 500ms ease;
+        }
+        @keyframes Slide {
+            0%{
+                top: 20px;
+            }
+            100%{
+                top: 0;
+            }
+        }
+
+        .chat .messages .message:after {
+            content: "";
+            clear: both;
+            display: table;
+
+        }
+        .chat .input {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 60px;
+            width: 100%;
+            background: #ecf0f1;
+        }
+        .chat .input .text {
+            background-color: #fff;
+            border-radius: 20px;
+            height: 40px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 270px;
+            box-shadow: inset 0 0 5px #aaa;
+            line-height: 40px;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+        .topSide{
+            background: #e8e8e8;
+            height: 20%;
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+        }
+        .natch{
+            height: 45px;
+            width: 120px;
+            background: #000;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            position: relative;
+            bottom: 41px;
+            left: 76px;
+        }
+        .camera{
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            background: #000000;
+            position: relative;
+            top: 30px;
+            left: 20px;
+            opacity: .7;
+            box-shadow: inset 0 0 5px #aaa;
+        }
+        .speaker{
+            height: 10px;
+            width: 50px;
+            border-radius: 20px;
+            background: #000000;
+            position: relative;
+            top: 20px;
+            left: 50px;
+            opacity: .7;
+            box-shadow: inset 0 0 5px #aaa;
+        }
+        .rightTopSide{
+            position: relative;
+            bottom: 60px;
+            left: 205px;
+        }
+        .leftTopSide{
+            position: relative;
+            top: 2px;
+            left: 11px;
+        }
+        .messageTop{
+            position: relative;
+            bottom: 50px;
+        }
+        .messageTop>i {
+            color: #5E89FB;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .messageTop>img{
+            margin: 0 70px;
+            border-radius:50%;
+            width: 40px;
+        }
+        .messageTop>span{
+            position: absolute;
+            left: 44%;
+            top: 97%;
+            font-size: 12px;
+
+        }
+        .input form>.material-icons{
+            position: relative;
+            left: 230px;
+            top: 18px;
+            color: #5E89FB;
+            cursor: pointer;
+        }
+        .mySlides {
+            text-align: center;
+            margin: 0 25%;
+            min-width: 300px;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: relative;
+            top: 50%;
+            width: auto;
+            margin-top: -30px;
+            padding: 16px;
+            color: #888;
+            font-weight: bold;
+            font-size: 50px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+
+        }
+        .next{
+            top: 585px;
+            left: 60%;
+
+        }
+        .prev{
+            top: 585px;
+            left: 32%;
+
+        }
+        .questions{
+            height: 50px;
+            line-height: 50px;
+            position: relative;
+            top: 640px;
+            margin: auto;
+            width: 50%;
+
+        }
+        .suggestedQuestions{
+            cursor: pointer;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+            color: white;
+        }
+
+        /*the jumping dots for message load*/
+
+        span.jumping-dots > span {
+            animation: dancing-dots-jump 1800ms infinite;
+            padding: 1px;
+            position: relative;
+        }
+
+        /* 1 */
+        span.jumping-dots > span:nth-child(2) {
+            animation-delay: 100ms;
+        }
+
+        span.jumping-dots > span:nth-child(3) {
+            animation-delay: 300ms;
+        }
+
+        @-webkit-keyframes dancing-dots-jump {
+            0% { top: 0; }
+            55% { top: 0; }
+            60% { top: -10px; }
+            80% { top: 3px; }
+            90% { top: -2px; }
+            95% { top: 1px; }
+            100% { top: 0; }
+        }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+
+<div class="chat">
+        <div class="topSide">
+        <div class="leftTopSide">
+            <span>09:00 <i class="material-icons" style="font-size: 15px">location_on</i></span>
+        </div>
+        <div class="natch">
+            <div class="camera"></div>
+            <div class="speaker"></div>
+        </div>
+        <div class="rightTopSide">
+            <span>
+                <i class="material-icons" style="font-size: 15px">network_cell</i>
+                <i class="material-icons" style="font-size: 15px">network_wifi</i>
+                <i class="material-icons" style="font-size: 15px">battery_full</i>
+            </span>
+        </div>
+        <div class="messageTop">
+            <i class="material-icons" >keyboard_arrow_left</i>
+
+            <img src="IMG/Screen%20Shot%202018-12-02%20at%209.52.42%20AM.png">
+
+            <span>Pibo</span>
+            <i class="material-icons">error_outline</i>
+        </div>
+        </div>
+    <div class="messages">
+        <div class="message">
+            <div class="pibo">
+                click on the questions or type in the number of the
+                question that you want me to answer ;)
+            </div>
+
+        </div>
+    </div>
+    <div class="input">
+        <form action="#" id="chat" method="post">
+            <input class="text" placeholder="choose a question from the options" disabled>
+            <i class="material-icons">send</i>
+        </form>
+    </div>
+</div>
+<div class="options">
+<div class="questions slideshow-container">
+
+    <div id="q1" class="suggestedQuestions mySlides">
+        1-Tell me more about you!
+    </div>
+    <div id="q2" class="suggestedQuestions mySlides">
+        2-You made this chat bot?
+    </div>
+    <div id="q3" class="suggestedQuestions mySlides">
+        3-Why did you choose Web devlopment?
+    </div>
+</div>
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<script src="js/jquery-2.2.4.min.js"></script>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[slideIndex-1].style.display = "block";
+        }
+        //
+
+
+        $('.suggestedQuestions').click(function () {
+            $('.options').fadeOut();
+            let question = $(this).html();
+            $('.message').append(`<div class="you"> ${question} </div>`);
+            let messageBody = document.querySelector('.messages');
+            messageBody.scrollTop = messageBody.scrollHeight - messageBody.clientHeight;
+            let id = $(this).attr('id');
+            // console.log(id);
+            setTimeout(function () {
+
+            loadingMsg()
+            messageBody.scrollTop = messageBody.scrollHeight - messageBody.clientHeight;
+            },1000)
+
+            setTimeout( function() {
+            // $(this).remove();
+            $('.dots').remove();
+                answers(id);
+            plusSlides(1);
+        messageBody.scrollTop = messageBody.scrollHeight - messageBody.clientHeight;
+        $('.options').fadeIn();
+
+            }, 5000);
+        });
+
+
+        function loadingMsg() {
+            $('.message').append(`<div class="pibo dots"> <span class="jumping-dots"><span>.</span><span>.</span><span>.</span></span></div>`)
+            $('.dots').css('width' , '30px')
+        }
+
+
+        function answers(q) {
+            switch (q) {
+                case 'q1':
+                    $('.message').append(`<div class="pibo piboSlide"> I'm ...</div>`);
+                break;
+                case 'q2':
+                    $('.message').append(`<div class="pibo piboSlide"> yes i did ....</div>`);
+                break;
+                case 'q3':
+                    $('.message').append(`<div class="pibo piboSlide"> because</div>`);
+                break;
+
+            }
+
+            // if (q = 'q1'){
+            //     $('.message').append(`<div class="pibo"> I'm ...</div>`);
+            // } else if (q = 'q2'){
+            //     $('.message').append(`<div class="pibo"> yes i did ....</div>`);
+            // } else if (q = 'q3'){
+            //     $('.message').append(`<div class="pibo"> because</div>`);
+            // }
+
+        }
+    </script>
+</body>
+</html>

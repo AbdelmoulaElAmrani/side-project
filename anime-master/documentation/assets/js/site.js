@@ -208,7 +208,7 @@ var logoAnimation = (function() {
       begin: function(a) { a.animatables[0].target.classList.add('highlighted'); },
       complete: function(a) { a.animatables[0].target.classList.remove('highlighted'); },
       offset: '-=2000'
-    })
+    });
 
 
   function init() {
@@ -226,4 +226,4 @@ var logoAnimation = (function() {
 window.onload = function() {
   logoAnimation.init();
   fireworks.setCanvasSize();
-}
+};

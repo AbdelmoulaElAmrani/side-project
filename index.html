@@ -2,20 +2,21 @@
 <html lang="en" class="sr">
 <head>
     <meta charset="UTF-8">
-    <title>buttons</title>
+    <title>welcome</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <div class="Main">
 
     <main id="helloMsg">
-        Hello, This is <a id="nameHover" class="btn">Pibo </a>.<br>
-        I'm a Full-stack web developer.
+      Hello, This is <a id="nameHover" class="btn">Pibo </a>.<br>
+        <div class="desc"> I'm a Full-stack web developer.</div>
         <hr>
 
     <a class="waves-effect waves-light btn" id="lookDownBtn" href="#scroll"><i id="errow" class="material-icons right">arrow_forward</i>See My Work</a>
@@ -23,69 +24,154 @@
 </div>
 <div id="particles-js"></div>
 
+<div class="container">
+
+    <div class="row wow bounceInUp">
+        <div class="col m6 s12">
+         <h2>About me and <strong>SOFTWARE</strong></h2>
+        <p>
+            I always hear That you have to choose between intelligence or creativity,
+            Science or art, either right side of the brain, or the left side.
+            Software actually makes me use both of the sides,
+            While developing a Web Application I could intelligently code it and creatively make it
+            look stunning,
+            plus the non-stop learning, and THAT means to me the purpose of existing.
+        </p>
+        </div>
+        <div class="col m6 s0 canvasForBalls">
+            <canvas id="canvas">
+            </canvas>
+                <img src="IMG/programmer-working-on-the-computer23-2147505689%20copy.png">
+        </div>
+    </div>
 <h1 class="headline ">
     18 WEEKS OF CODEUP
 </h1>
 
 <p class="tagline" id="scroll">
-    This is my TOP!
+    My Latest Work
     <span class="punchline"> So far.</span>
 </p>
-<div class="container">
 
         <div class="row">
-            <div class="col s10 m6 l3" >
-                <div class="card widget" id="weatherWidget">
-                    <div class="card-image"  >
-                        <span class="card-title">WEATHER MAP API</span>
-                        <a class="btn-floating halfway-fab waves-effect waves-light red viewBtn"><i class="material-icons">visibility</i></a>
-                    </div>
+            <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="IMG/nasaspace.png">
+                            <a class="btn-floating halfway-fab waves-effect waves-light red" target="_blank" href="https://abdelmoulaelamrani.github.io/nasa-api-doc/"><i class="material-icons">visibility</i></a>
+                            <a class="btn-floating halfway-fab waves-effect waves-light left red" target="_blank" href="https://github.com/AbdelmoulaElAmrani/nasa-api-doc"><i class="material-icons">code</i></a>
+                        </div>
+                        <div class="card-content">
+                            <p>
+                                <strong>NASA API</strong> is a project that offers documentation on NASA API
+                                with a code example , I will develop it more in the future .
 
+                            </p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col s10 m6 l3" >
-                <div class="card widget" id="weatherWidget2">
+            <div class="col s12 m4">
+                <div class="card">
                     <div class="card-image">
-                        <span class="card-title">SIMPLE GAMES</span>
-                        <a class="btn-floating halfway-fab waves-effect waves-light red viewBtn"><i class="material-icons">visibility</i></a>
+                        <img src="IMG/dooropen.png">
+                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">visibility</i></a>
+                        <a class="btn-floating halfway-fab waves-effect waves-light left red"><i class="material-icons">code</i></a>
                     </div>
-
+                    <div class="card-content">
+                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                    </div>
                 </div>
             </div>
-            <div class="col s10 m6 l3">
-                <div class="card widget" id="weatherWidget3">
-                    <div class="card-image">
-                        <span class="card-title">BUTTONS</span>
-                        <a class="btn-floating halfway-fab waves-effect waves-light red viewBtn"><i class="material-icons">visibility</i></a>
-                    </div>
-
+            <div class="col s12 m4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="IMG/dooropen.png">
+                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">visibility</i></a>
+                    <a class="btn-floating halfway-fab waves-effect waves-light left red"><i class="material-icons">code</i></a>
+                </div>
+                <div class="card-content">
+                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
                 </div>
             </div>
-            <div class="col s10 m6 l3">
-                <div class="card widget">
-                    <div class="card-image">
-                        <img id="weatherWidget4" src="IMG/weather.gif">
-                        <span class="card-title">SIMPLE GAMES</span>
-                        <a class="btn-floating halfway-fab waves-effect waves-light red viewBtn"><i class="material-icons">visibility</i></a>
-                    </div>
+        </div>
 
-                </div>
-            </div>
 
         </div>
+    <h3 class="tagline" >
+        Technological Skills
+    </h3>
+    <p class="tagline" id="">
+        I always enjoy learning new things.<br>
+
+        <span class="punchline"> Especially the technologies that make our life easier.</span>
+    </p>
+    <div class="row">
+        <div class="col s12 m6 l2 skillsClass"><p>Semantic HTML5</p><span>100%</span></div>
+        <div class="col s12 m6 l2 skillsClass"><p>Responsive CSS3</p><span>100%</span></div>
+        <div class="col s12 m6 l2 skillsClass"><p>Interctive JavaScript</p><span>100%</span></div>
+        <div class="col s12 m6 l2 skillsClass"><p>front-end frameworks</p><span>100%</span></div>
+        <div class="col s12 m6 l2 skillsClass"><p>JAVA</p><span>90%</span></div>
+        <div class="col s12 m6 l2 skillsClass"><p>SPRINT</p><span>90%</span></div>
+        <div class="col s12 m6 l2 skillsClass"><p>React</p><span>60% almost done</span></div>
+        <div class="col s12 m6 l2 skillsClass"><p>git</p><span>100%</span></div>
+        <div class="col s12 m6 l2 skillsClass"><p>github</p><span>100%</span></div>
+        <div class="col s12 m6 l2 skillsClass"><p>Canvas</p><span>80%</span></div>
+        <div class="col s12 m6 l2 skillsClass"><p>Ps & Ai</p><span>80%</span></div>
+        <div class="col s12 m6 l2 skillsClass"><p>Problem Solver</p><span>100%</span></div>
+        <div class="col s6 offset-s3 skillsClass"><p>Transform PSD / Wireframes into web applications</p><span>100%</span></div>
+
+    </div>
+    <h3 class="tagline">Why work with me?</h3>
+    <p class="tagline" id="">
+        There are many advantages to working with me.
+   <span class="punchline">Here are a few :</span>
+    </p>
+    <div class="row">
+        <div class="col s12 l4 tagline workWithMe">
+            <i class="material-icons col s12">person_add</i>
+            <h5>Adaptable</h5>
+            <p>The most valuable thing I can provide to your
+                company is the ability to be molded to your stack,
+            positive attitude and group motivation.
+            </p>
+        </div>
+        <div class="col s12 l4 tagline workWithMe">
+            <i class="material-icons col s12">code</i>
+            <h5>Passionate about development</h5>
+            <p>
+                Big believer in the fact that the greatest work is done by passionate people.
+            </p>
+        </div>
+        <div class="col s12 l4 tagline workWithMe">
+            <i class="material-icons col s12">book</i>
+            <h5>Quick learner</h5>
+            <p>
+                Confident in my ability to learn something new and put it into production.
+            </p>
+
+        </div>
+    </div>
+
+
+
+
+
 </div>
 
 
 
 
-<script src="particles.js"></script>
-<script src="app.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/app.js"></script>
+<script src="js/WOW.js"></script>
+<script>
 
+</script>
 
-<script src="jquery-2.2.4.min.js"></script>
+<script src="js/jquery-2.2.4.min.js"></script>
 <script src="anime-master/anime.min.js"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src="script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

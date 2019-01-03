@@ -8,6 +8,29 @@ html {
     background: #020122; /*RICH BLACK (FOGRA29)*/
 
 }
+.Main .desc {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation:
+            typing 3.5s steps(40, end),
+            blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
+
 #particles-js{
     width: 100%;
     height: 720px;
@@ -29,7 +52,7 @@ html {
 }
 #nameHover{
     font-weight: bold;
-    color: #F15025; /*FLAME*/
+    color: rgb(241, 80, 37); /*FLAME*/
     background: transparent;
     font-size: 50px;
 
@@ -93,16 +116,10 @@ html.sr .load-hidden {
     /*padding:0 25%;*/
     line-height: 20px;
     width: auto;
-    height: 0px;
     z-index: 1;
 }
 
 
-#weatherWidget{
-    background:url("IMG/weather.gif") repeat  bottom;
-    background-size: cover;
-
-}
 #weatherWidget:after{
     position: absolute;
     content: " ";
@@ -114,7 +131,7 @@ html.sr .load-hidden {
     background-color: rgba(2,1,34, 0.5);
 }
 #weatherWidget2{
-    background: url("IMG/game.gif") no-repeat bottom;
+    background: url("../IMG/game.gif") no-repeat bottom;
     background-size: cover;
 }
 #weatherWidget2:after{
@@ -128,7 +145,7 @@ html.sr .load-hidden {
     background-color: rgba(2,1,34, 0.5);
 }
 #weatherWidget3{
-    background: url("IMG/btn.gif") no-repeat bottom;
+    background: url("../IMG/btn.gif") no-repeat bottom;
     background-size: cover;
 }
 #weatherWidget3:after{
@@ -142,5 +159,53 @@ html.sr .load-hidden {
     background-color: rgba(2,1,34, 0.5);
 }
 .viewBtn>.material-icons {
-    background: #F15025;
+    background-color: rgb(241, 80, 37);
+}
+.canvasForBalls canvas , .canvasForBalls img{
+    max-height: 300px;
+    margin-top: 20px;
+}
+.canvasForBalls img{
+    position: relative;
+    bottom: 350px;
+    left: 120px;
+}
+.canvasForBalls{
+    HEIGHT: 350px;
+}
+.canvasForBalls canvas{
+    border: #020122 solid 1px;
+}
+
+.skillsClass{
+    margin-bottom: 5px;
+    height: 50px;
+    line-height: 100%;
+    border:rgb(241, 80, 37) solid 1px  ;
+    background:rgb(241, 80, 37) ;
+    border-radius: 50px ;
+    text-align: center;
+}
+.skillsClass span{
+    display: none;
+}
+.skillsClass:hover span{
+    display: block;
+    margin-top: 20px;
+}
+.skillsClass:hover p{
+    display: none;
+}
+.skillsClass:hover{
+    background: transparent;
+    color: #020122;
+}
+
+.workWithMe>i{
+    font-size: 100px;
+    color:rgb(241, 80, 37) ;
+
+}
+.card-content strong{
+    font-size: x-large;
 }

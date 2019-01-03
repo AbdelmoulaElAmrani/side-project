@@ -8,16 +8,20 @@
             stroke: #F15025;
             stroke-width: 3px ;
             fill: none;
-            stroke-dasharray: 7000 ;
-            stroke-dashoffset: 7000;
-            animation: animate 3s linear infinite ;
-        }
-    @keyframes animate {
-        to{
-            stroke-dashoffset: 0;
 
         }
-    }
+		.goldenSpiralBox{
+			animation: rotating 2s linear infinite;
+		}
+		@keyframes rotating {
+			from {
+
+				transform: rotate(0deg);
+			}
+			to {
+				transform: rotate(360deg);
+			}
+		}
 </style>
 </head>
 <body>

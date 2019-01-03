@@ -99,7 +99,7 @@
       params.complete = function() { testEl.classList.add('color-05') };
       var animation = anime(params);
       animation.finished.then(function() {
-        promiseEl.value = 'Promise resolved'
+        promiseEl.value = 'Promise resolved';
         console.log('Promise resolved');
       });
       testEl.onclick = function() {

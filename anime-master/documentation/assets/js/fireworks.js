@@ -43,7 +43,7 @@ var fireworks = (function() {
       ctx.arc(p.x, p.y, p.radius, 0, 2 * Math.PI, true);
       ctx.fillStyle = p.color;
       ctx.fill();
-    }
+    };
     return p;
   }
 
@@ -63,7 +63,7 @@ var fireworks = (function() {
       ctx.strokeStyle = p.color;
       ctx.stroke();
       ctx.globalAlpha = 1;
-    }
+    };
     return p;
   }
 
