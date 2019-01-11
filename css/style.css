@@ -340,6 +340,15 @@ html.sr .load-hidden {
 }
 
 /*//footer*/
+footer{
+    color: white ;
+}
+footer label{
+    font-size: 40px;
+}
+footer p{
+    font-size: smaller;
+}
 footer ul {
     display: inline-grid;
     grid-gap: 30px;
@@ -369,8 +378,7 @@ footer li:hover ~ li p {
 
 footer div {
     display: flex;
-
-    height: 50vh;
+    height: 40vh;
     width: 100%;
     background-color: #020122;
     line-height: 1.3;

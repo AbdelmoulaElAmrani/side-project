@@ -5,22 +5,22 @@
     outline: 0;
 }
 
-body {
-    background-color: #F15025;
-    font-family: Arial;
-}
+/*body {*/
+    /*font-family: Arial;*/
+/*}*/
 
 .chat {
+    /*background-color: #F15025;*/
     width: 280px;
     height: 500px;
     background-size: cover;
     background: white center;
-    position: absolute;
+    position: relative;
     border: 10px solid #000;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 0 20px #000;
-    top: 0;
+    top: 85px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -200,20 +200,21 @@ body {
 
 }
 .next{
-    top: 585px;
+    top: 39px;
     left: 60%;
 
 }
 .prev{
-    top: 585px;
-    left: 32%;
+    top: 39px;
+    left: 30%;
 
 }
 .questions{
     height: 50px;
     line-height: 50px;
     position: relative;
-    top: 640px;
+    top: 92px;
+    left: -10px;
     margin: auto;
     width: 50%;
 
@@ -226,6 +227,11 @@ body {
     color: white;
 }
 
+footer{
+    position: absolute;
+    top: 800px;
+    width: 100%;
+}
 /*the jumping dots for message load*/
 
 span.jumping-dots > span {
