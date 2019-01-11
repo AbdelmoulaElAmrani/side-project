@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>Contact me</title>
+
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/cs-select.css" />
+		<link rel="stylesheet" type="text/css" href="css/cs-skin-boxes.css" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body>
+	<header style="position: absolute ; left: 0;">
+		<div class="navbar">
+			<ul class="nav">
+				<li class="item">
+					<a href="index.html">Home</a>
+				</li>
+
+				<li class="item">
+					<a href="#skills">Skills</a>
+				</li>
+
+				<li class="item">
+					<a href="#about">About</a>
+				</li>
+
+
+			</ul>
+
+			<div class="logo">
+				<a href="index.html"> <img src="IMG/picready2.png"></a>
+			</div>
+		</div>
+	</header>
+	<br>
+		<div class="container">
+
+			<div class="fs-form-wrap" id="fs-form-wrap">
+
+				<form method="POST" id="myform"
+					  action="https://script.google.com/macros/s/AKfycbzFrnV7HI5dxDDmYgIt_PXbIo7_arQyUmsQiZi6/exec" data-email="elamraniabdelmoula@gmail.com"
+					  class="fs-form fs-form-full gform">
+					<ol class="fs-fields">
+						<li>
+							<label class="fs-field-label fs-anim-upper" for="q1">What's your name?</label>
+							<input class="fs-anim-lower" id="q1" name="q1" type="text" placeholder="" required/>
+						</li>
+						<li>
+							<label class="fs-field-label fs-anim-upper" for="q2" data-info="We won't send you spam, we promise...">What's your email address?</label>
+							<input class="fs-anim-lower" id="q2" name="q2" type="email" placeholder="dean@road.us" required/>
+						</li>
+						<li data-input-trigger>
+							<label class="fs-field-label fs-anim-upper" for="q3" data-info="This will help us know what kind of service you need">What's the job position?</label>
+							<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+								<span><input id="q3b" name="q3" type="radio" value="full"/><label for="q3b" class="radio-conversion">Full Stack</label></span>
+								<span><input id="q3c" name="q3" type="radio" value="back"/><label for="q3c" class="radio-social">Back end</label></span>
+								<span><input id="q3a" name="q3" type="radio" value="front"/><label for="q3a" class="radio-mobile">Front end</label></span>
+							</div>
+						</li>
+						<li>
+							<label class="fs-field-label fs-anim-upper" for="q4">Your message</label>
+							<textarea class="fs-anim-lower" id="q4" name="q4" placeholder="Describe here"></textarea>
+						</li>
+					</ol><!-- /fs-fields -->
+					<button class="fs-submit" type="submit">Send</button>
+					<div style="display:none" class="thankyou_message">
+						<!-- You can customize the thankyou message by editing the code below -->
+						<h2><em>Thanks</em> for contacting me! I will get back to you soon!<a href="chat-bot.html">  { KNOW MORE ABOUT ME HERE } </a>
+						</h2>
+					</div>
+				</form><!-- /fs-form -->
+			</div><!-- /fs-form-wrap -->
+
+
+
+		</div><!-- /container -->
+
+		<footer>
+
+			<div class="row">
+				<div class="col s12 l6">
+					<div>
+						<ul>
+							<li><a target="_blank" href="https://github.com/AbdelmoulaElAmrani">GITHUB</a></li>
+							<li><a target="_blank" href="https://www.linkedin.com/in/el-amrani/">LINKEDIN</a></li>
+							<li>
+								<p>👋</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col s12 l6">
+
+
+
+				</div>
+			</div>
+		</footer>
+		<script src="js/classie.js"></script>
+		<script src="js/selectFx.js"></script>
+		<script src="js/fullscreenForm.js"></script>
+		<script>
+			(function() {
+
+
+				var formWrap = document.getElementById( 'fs-form-wrap' );
+
+				[].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {	
+					new SelectFx( el, {
+						stickyPlaceholder: false,
+						onChange: function(val){
+							document.querySelector('span.cs-placeholder').style.backgroundColor = val;
+						}
+					});
+				} );
+
+				new FForm( formWrap, {
+					onReview : function() {
+						classie.add( document.body, 'overview' ); // for demo purposes only
+					}
+				} );
+			})();
+		</script>
+	<script src="js/script.js"></script>
+	<script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js"></script>
+
+	</body>
+</html>

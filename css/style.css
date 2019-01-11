@@ -2,10 +2,126 @@ html {
     scroll-behavior: smooth;
     background: #F7F3E3; /*LINEN*/
 }
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+/*@supports (position: sticky) {*/
+    /*body {*/
+        /*padding-top: 0;*/
+    /*}*/
+
+    /*!*header {*!*/
+        /*!*position: sticky;*!*/
+    /*!*}*!*/
+
+/*}*/
+
+.navbar {
+    font-family: 'Orbitron', sans-serif;
+    background: rgb(2, 0, 36);
+    position: relative;
+    height: 80px;
+    width: 100%;
+    transition: 0.5s ease;
+    color: #F7F3E3;
+}
+
+.navbar .nav {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    float: right;
+    margin-right: 5%;
+}
+
+.navbar .nav .item {
+    list-style: none;
+    display: inline-block;
+    font-size: 18px;
+    padding: 5px;
+    font-weight: 300;
+    line-height: 80px;
+    margin-right: 20px;
+    transition: 0.5s ease;
+}
+
+.navbar .nav .item .contact {
+    display: inline-block;
+    background-color: #ffffff;
+    color : #020122;
+    height: 40px;
+    line-height: 30px;
+    padding: 5px;
+    border-radius: 2px;
+    transition: 0.5s ease;
+}
+
+.navbar .nav .item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar .logo {
+    float: left;
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 5%;
+    width: 70px;
+    height: 70px;
+}
+
+.navbar .logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.scrolled {
+    transition: 0.5s ease;
+}
+
+.scrolled.navbar {
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: 0.5s ease;
+
+}
+
+
+.scrolled.navbar .nav .item {
+    line-height: 40px;
+    transition: 0.5s ease;
+}
+
+.scrolled.navbar .nav .item .contact {
+    display: inline-block;
+    background-color: #ffffff;
+    height: 40px;
+    line-height: 30px;
+    padding: 5px;
+    border-radius: 2px;
+    transition: 0.5s ease;
+}
+
+.scrolled.navbar .logo {
+    float: left;
+    display: inline-block;
+    margin-top: 2px;
+    margin-left: 5%;
+    width: 40px;
+    height: 40px;
+    transition: 0.5s ease;
+}
 .Main{
     height: 720px;
     width: 100%;
     background: #020122; /*RICH BLACK (FOGRA29)*/
+    margin-bottom: 50px;
 }
 .Main .desc {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -39,6 +155,10 @@ html {
     transition-duration: 1s;
 
 }
+.tempoPosition{
+    position: relative;
+    left: 20%;
+}
 
 #helloMsg{
     font-family: 'Orbitron', sans-serif;
@@ -46,12 +166,12 @@ html {
     color: #F7F3E3;
     text-align: center;
     position: relative;
-    top: 300px;
+    top: 160px;
 
 }
 #nameHover{
     font-weight: bold;
-    color: rgb(241, 80, 37); /*FLAME*/
+    color:#f15024; /*FLAME*/
     background: transparent;
     font-size: 50px;
 
@@ -63,7 +183,7 @@ hr{
 #lookDownBtn{
     background: transparent;
     padding-top: 10px;
-    border: #F15025 solid 1px ;
+    border: #f15024 solid 1px ;
     font-size: 18px;
     text-align: center;
     height: 60px;
@@ -72,6 +192,13 @@ hr{
 #errow{
     transition-duration: 1s;
 }
+
+@media only screen and (max-width: 1200px) {
+    #helloMsg {
+        font-size: 38px;
+    }
+}
+
 html.sr .load-hidden {
     visibility: hidden;
 }
@@ -89,7 +216,9 @@ html.sr .load-hidden {
 .container{
     font-family: 'Staatliches', cursive;
 }
-
+#about , project ,#skills{
+    padding-top: 50px;
+}
 .widget {
     flex: auto;
     margin: 0.5rem;
@@ -157,7 +286,7 @@ html.sr .load-hidden {
     background-color: rgba(2,1,34, 0.5);
 }
 .viewBtn>.material-icons {
-    background-color: rgb(241, 80, 37);
+    background-color: #f15024;
 }
 .canvasForBalls canvas , .canvasForBalls img{
     max-height: 300px;
@@ -181,8 +310,8 @@ html.sr .load-hidden {
     margin-bottom: 5px;
     height: 50px;
     line-height: 100%;
-    border:rgb(241, 80, 37) solid 1px  ;
-    background:rgb(241, 80, 37) ;
+    border:#f15024 solid 1px  ;
+    background:#f15024 ;
     border-radius: 50px ;
     text-align: center;
 }
@@ -203,7 +332,7 @@ html.sr .load-hidden {
 
 .workWithMe>i{
     font-size: 100px;
-    color:rgb(241, 80, 37) ;
+    color:#f15024 ;
 
 }
 .card-content strong{
@@ -240,6 +369,7 @@ footer li:hover ~ li p {
 
 footer div {
     display: flex;
+
     height: 50vh;
     width: 100%;
     background-color: #020122;
@@ -258,4 +388,31 @@ footer div {
     75% {
         transform: rotate(-15deg);
     }
+}
+/*contact me*/
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #f15024;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #ff5525;
 }

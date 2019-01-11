@@ -12,12 +12,40 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<header>
+    <div class="navbar">
+        <ul class="nav" >
+            <li class="item">
+                <a href="CONTACT.html">Contact me</a>
+            </li>
 
-<div class="Main">
+            <li class="item">
+                <a href="#skills">Skills</a>
+            </li>
 
-    <main id="helloMsg">
-      Hello, This is <a id="nameHover" class="btn">Pibo </a>.<br>
-        <div class="desc"> I'm a Full-stack web developer.</div>
+            <li class="item">
+                <a href="#about">About</a>
+            </li>
+
+            <li class="item">
+                <a href="IMG/EL_amrani_abdelmoula.pdf" download="ElAmrani_Abdelmoula_resume" class="contact">Resume<i class="material-icons right">cloud_download</i></a>
+            </li>
+        </ul>
+
+        <div class="logo">
+           <a href="#main"> <img src="IMG/picready2.png"></a>
+        </div>
+    </div>
+</header>
+
+<div class="Main container" id="main">
+
+    <main id="helloMsg" class="col s12">
+        <div class="" ><h1>
+
+      Hello! this is <a id="nameHover" class="btn">Pibo </a>.</h1>
+        </div>
+        <div class="desc col s12"> <h1>I'm a Full-stack web developer.</h1></div>
         <hr>
 
     <a class="waves-effect waves-light btn" id="lookDownBtn" href="#myWork"><i id="errow" class="material-icons right">arrow_forward</i>See My Work</a>
@@ -27,7 +55,7 @@
 
 <div class="container">
 
-    <div class="row wow bounceInUp">
+    <div id="about" class="row wow bounceInUp">
         <div class="col l6 m12 s12 tagline">
          <h2>About me and <strong>SOFTWARE</strong></h2>
         <p>
@@ -54,7 +82,7 @@
     <span class="punchline"> So far.</span>
 </p>
 
-        <div class="row">
+        <div id="project" class="row">
             <div class="col s12 m12 l4">
                     <div class="card">
                         <div class="card-image">
@@ -74,31 +102,33 @@
             <div class="col s12 m12 l4">
                 <div class="card">
                     <div class="card-image">
-                        <img src="IMG/dooropen.png">
-                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">visibility</i></a>
+                        <img src="IMG/Space-Lister.png">
+                        <!--<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">visibility</i></a>-->
                         <a class="btn-floating halfway-fab waves-effect waves-light left red"><i class="material-icons">code</i></a>
                     </div>
                     <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                        <p><strong>SPACELISTER</strong>is a full stack web application based on school peer project for an
+                            adlister , me and my team decided to make it a space adlister.</p>
                     </div>
                 </div>
             </div>
             <div class="col ss12 m12 l4">
             <div class="card">
                 <div class="card-image">
-                    <img src="IMG/dooropen.png">
+                    <img src="IMG/weather.png">
                     <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">visibility</i></a>
                     <a class="btn-floating halfway-fab waves-effect waves-light left red"><i class="material-icons">code</i></a>
                 </div>
                 <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                    <p><strong>WEATHER MAP APP</strong> is an API project combining between the weather API
+                    and google map API</p>
                 </div>
             </div>
         </div>
 
 
         </div>
-    <h3 class="tagline" >
+    <h3 id="skills" class="tagline" >
         Technological Skills
     </h3>
     <p class="tagline" id="">
@@ -106,7 +136,7 @@
 
         <span class="punchline"> Especially the technologies that make our life easier.</span>
     </p>
-    <div class="row">
+    <div  class="row">
         <div class="col s12 m6 l2 skillsClass"><p>Semantic HTML5</p><span>100%</span></div>
         <div class="col s12 m6 l2 skillsClass"><p>Responsive CSS3</p><span>100%</span></div>
         <div class="col s12 m6 l2 skillsClass"><p>Interctive JavaScript</p><span>100%</span></div>
@@ -158,8 +188,22 @@
 
 
 </div>
+            <!-- Modal Trigger -->
+            <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <h4>Modal Header</h4>
+                    <p>A bunch of text</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                </div>
+            </div>
 
 <footer>
+
     <div class="row">
         <div class="col s12 l6">
             <div>
@@ -174,7 +218,10 @@
         </div>
         <div class="col s12 l6">
 
+
+
         </div>
+    </div>
     </div>
 </footer>
 
@@ -184,14 +231,10 @@
 <script src="js/particles.js"></script>
 <script src="js/app.js"></script>
 <script src="js/WOW.js"></script>
-<script>
-
-</script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="js/jquery-2.2.4.min.js"></script>
 <script src="anime-master/anime.min.js"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

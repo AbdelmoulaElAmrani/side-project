@@ -13,7 +13,7 @@ $('#nameHover').mouseenter(() => {
     })
 });
 
-$('#lookDownBtn').mouseenter(() => {
+$('#lookDownBtn ').mouseenter(() => {
     $('#lookDownBtn').css("background" , '#F15025')
         .children().css('transform' , 'rotate(90deg)');
         $('#particles-js').css('width', '110%')
@@ -24,14 +24,27 @@ $('#lookDownBtn').mouseenter(() => {
     $('#particles-js').css('width', '100%')
 
 });
-
+$('.item').mouseenter(() => {
+    $('#particles-js').css('width', '130%');
+}).mouseleave(() => {
+    $('#particles-js').css('width', '100%');
+})
 
 ScrollReveal().reveal('.headline', );
 ScrollReveal().reveal('.tagline', { delay: 500 });
 ScrollReveal().reveal('.punchline', { delay: 2000 });
 ScrollReveal().reveal('.widget', { interval: 500 });
 
-
+//nav
+$(document).ready(function() {
+    $(window).on('scroll', function() {
+        if (Math.round($(window).scrollTop()) > 100) {
+            $('.navbar').addClass('scrolled');
+        } else {
+            $('.navbar').removeClass('scrolled');
+        }
+    });
+});
 // balls bouncing
 
 let canvas = document.getElementById("canvas");
@@ -131,3 +144,8 @@ setInterval(function() {
     bal.push(new Ball());
     bal.splice(0, 1);
 }, 400);
+//modal
+M.AutoInit();
+$(document).ready(function(){
+    $('.modal').modal();
+});
