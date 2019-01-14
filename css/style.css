@@ -50,9 +50,9 @@ header {
     transition: 0.5s ease;
 }
 
-.navbar .nav .item .contact {
+.navbar .nav .item .resume {
     display: inline-block;
-    background-color: #ffffff;
+    background-color: #f15024;
     color : #020122;
     height: 40px;
     line-height: 30px;

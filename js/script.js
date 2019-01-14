@@ -145,7 +145,3 @@ setInterval(function() {
     bal.splice(0, 1);
 }, 400);
 //modal
-M.AutoInit();
-$(document).ready(function(){
-    $('.modal').modal();
-});
