@@ -145,3 +145,4 @@ setInterval(function() {
     bal.splice(0, 1);
 }, 400);
 //modal
+
