@@ -24,11 +24,17 @@ $('#lookDownBtn ').mouseenter(() => {
     $('#particles-js').css('width', '100%')
 
 });
-$('.item').mouseenter(() => {
-    $('#particles-js').css('width', '130%');
-}).mouseleave(() => {
-    $('#particles-js').css('width', '100%');
-})
+
+    $('.item').mouseenter(() => {
+        if (window.width > 479) {
+            $('#particles-js').css('width', '130%');
+        }
+    }).mouseleave(() => {
+        if (window.width > 479) {
+
+            $('#particles-js').css('width', '100%');
+        }
+    });
 
 ScrollReveal().reveal('.headline', );
 ScrollReveal().reveal('.tagline', { delay: 500 });
