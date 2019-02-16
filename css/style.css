@@ -118,7 +118,7 @@ header {
     transition: 0.5s ease;
 }
 .Main{
-    height: 720px;
+    height: 670px;
     width: 100%;
     background: #020122; /*RICH BLACK (FOGRA29)*/
     margin-bottom: 50px;
@@ -154,6 +154,9 @@ header {
     background: transparent;
     transition-duration: 1s;
 
+}
+#particles-js canvas{
+    background: black;
 }
 .tempoPosition{
     position: relative;
