@@ -118,6 +118,7 @@ header {
     transition: 0.5s ease;
 }
 .Main{
+    z-index: -1;
     height: 670px;
     width: 100%;
     background: #020122; /*RICH BLACK (FOGRA29)*/
@@ -170,7 +171,7 @@ header {
     text-align: center;
     position: relative;
     top: 160px;
-
+    z-index: 1;
 }
 #nameHover{
     font-weight: bold;
